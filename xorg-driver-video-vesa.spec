@@ -1,12 +1,12 @@
 Summary:	X.org video driver for generic VESA video cards
 Summary(pl):	Sterownik obrazu X.org dla kart graficznych zgodnych z VESA
 Name:		xorg-driver-video-vesa
-Version:	1.0.1.1
+Version:	1.0.1.3
 Release:	0.1
 License:	MIT
 Group:		X11/Applications
-Source0:	http://xorg.freedesktop.org/releases/X11R7.0-RC3/driver/xf86-video-vesa-%{version}.tar.bz2
-# Source0-md5:	f54f38679072d4f094b5b2bad2b4acca
+Source0:	http://xorg.freedesktop.org/releases/X11R7.0/src/driver/xf86-video-vesa-%{version}.tar.bz2
+# Source0-md5:	38e8bc1a630a4b83cb602bfd2fe90b7c
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
@@ -54,6 +54,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc ChangeLog
+%doc COPYING ChangeLog
 %attr(755,root,root) %{_libdir}/xorg/modules/drivers/vesa_drv.so
 %{_mandir}/man4/vesa.4*
