@@ -1,5 +1,5 @@
 Summary:	X.org video driver for generic VESA video cards
-Summary(pl.UTF-8):   Sterownik obrazu X.org dla kart graficznych zgodnych z VESA
+Summary(pl.UTF-8):	Sterownik obrazu X.org dla kart graficznych zgodnych z VESA
 Name:		xorg-driver-video-vesa
 Version:	1.3.0
 Release:	1
