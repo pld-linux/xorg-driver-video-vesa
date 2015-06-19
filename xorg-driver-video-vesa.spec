@@ -1,13 +1,12 @@
 Summary:	X.org video driver for generic VESA video cards
 Summary(pl.UTF-8):	Sterownik obrazu X.org dla kart graficznych zgodnych z VESA
 Name:		xorg-driver-video-vesa
-Version:	2.3.3
-Release:	5
+Version:	2.3.4
+Release:	1
 License:	MIT
 Group:		X11/Applications
 Source0:	http://xorg.freedesktop.org/releases/individual/driver/xf86-video-vesa-%{version}.tar.bz2
-# Source0-md5:	3690a5356ed121b1a7dfb59a6dcf4bf9
-Patch0:		%{name}-xf86gtfmode.patch
+# Source0-md5:	a893c37c589f7a31cea929a5d896a0e2
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.60
 BuildRequires:	automake
@@ -20,10 +19,10 @@ BuildRequires:	xorg-proto-randrproto-devel
 BuildRequires:	xorg-proto-renderproto-devel
 BuildRequires:	xorg-proto-xextproto-devel >= 7.0.99.1
 BuildRequires:	xorg-util-util-macros >= 1.8
-BuildRequires:	xorg-xserver-server-devel >= 1.0.99.901
+BuildRequires:	xorg-xserver-server-devel >= 1.6
 %{?requires_xorg_xserver_videodrv}
 Requires:	xorg-lib-libpciaccess >= 0.12.901
-Requires:	xorg-xserver-server >= 1.0.99.901
+Requires:	xorg-xserver-server >= 1.6
 Provides:	xorg-driver-video
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -36,7 +35,6 @@ VESA.
 
 %prep
 %setup -q -n xf86-video-vesa-%{version}
-%patch0 -p1
 
 %build
 %{__libtoolize}
